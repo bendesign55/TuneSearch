@@ -13,7 +13,7 @@
         <!--TuneSearch-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TuneSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainSearchViewController" customModule="TuneSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                     <segment title="Album"/>
                                     <segment title="Song"/>
                                 </segments>
+                                <connections>
+                                    <action selector="searchCategoryChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ogl-JQ-HZd"/>
+                                </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="077-cG-dna">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
@@ -34,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="182" width="375" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="88" id="9mJ-Tm-18A">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" rowHeight="88" id="9mJ-Tm-18A" customClass="ResultTableViewCell" customModule="TuneSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9mJ-Tm-18A" id="Vgg-jy-pd4">
@@ -68,6 +71,10 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="2hq-Q3-7RC" secondAttribute="trailing" constant="41" id="mnE-WS-taU"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="resultImageView" destination="XJO-uf-LpB" id="Q3m-BY-0ha"/>
+                                            <outlet property="resultTitleLabel" destination="2hq-Q3-7RC" id="ovM-mA-dhb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,6 +96,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="TuneSearch" id="xX7-Ck-WNC"/>
                     <connections>
+                        <outlet property="resultsTableView" destination="9D3-g0-1QB" id="R6q-hq-Gdk"/>
+                        <outlet property="searchCategorySegmentedControl" destination="yku-HV-dGk" id="RZj-ge-mc2"/>
+                        <outlet property="textSearchBar" destination="077-cG-dna" id="tNm-Pz-LfW"/>
                         <segue destination="SGt-dh-Tqk" kind="show" identifier="showDetailSegue" id="glv-WT-am7"/>
                     </connections>
                 </viewController>
