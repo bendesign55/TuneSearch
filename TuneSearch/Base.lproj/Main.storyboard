@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Result Detail View Controller-->
         <scene sceneID="2y8-w7-dZM">
             <objects>
-                <viewController id="SGt-dh-Tqk" sceneMemberID="viewController">
+                <viewController id="SGt-dh-Tqk" customClass="ResultDetailViewController" customModule="TuneSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dZh-z9-Rj3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,6 +168,9 @@
                                 <state key="normal" title="Listen Here">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openLink:" destination="SGt-dh-Tqk" eventType="touchUpInside" id="pUw-i0-WKl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,6 +188,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UBo-0r-4Xp"/>
                     </view>
+                    <connections>
+                        <outlet property="listenHereButton" destination="APl-gI-DoZ" id="OpQ-D9-aay"/>
+                        <outlet property="listenerView" destination="HHT-Hw-55r" id="r3k-xz-NRy"/>
+                        <outlet property="numberOfListenersLabel" destination="zSI-6T-Zvm" id="Hwv-w3-zKu"/>
+                        <outlet property="resultImageView" destination="IoU-6A-cuZ" id="Lnp-RQ-Eyn"/>
+                        <outlet property="resultTitleLabel" destination="RbE-UH-sIg" id="19k-Jo-4se"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fto-ru-Yqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

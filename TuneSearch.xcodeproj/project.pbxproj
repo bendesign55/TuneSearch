@@ -28,6 +28,7 @@
 		A849F7C02150452F006DBBF0 /* GCDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A849F7BF2150452F006DBBF0 /* GCDHelper.swift */; };
 		A849F7C421504560006DBBF0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A849F7C321504560006DBBF0 /* UIImageView+Extensions.swift */; };
 		A8FA79BE21505C0200527710 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA79BD21505C0200527710 /* ResultTableViewCell.swift */; };
+		A8FA79C021505E6700527710 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA79BF21505E6700527710 /* ResultDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A849F7BF2150452F006DBBF0 /* GCDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDHelper.swift; sourceTree = "<group>"; };
 		A849F7C321504560006DBBF0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		A8FA79BD21505C0200527710 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		A8FA79BF21505E6700527710 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				A83E7032215059530020B1EB /* MainSearchViewController.swift */,
 				A8FA79BD21505C0200527710 /* ResultTableViewCell.swift */,
+				A8FA79BF21505E6700527710 /* ResultDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				A83E701D21504B0E0020B1EB /* Artist.swift in Sources */,
 				A849F7B8215041D4006DBBF0 /* APIClient.swift in Sources */,
 				A83E702321504B2F0020B1EB /* Image.swift in Sources */,
+				A8FA79C021505E6700527710 /* ResultDetailViewController.swift in Sources */,
 				A83E702121504B280020B1EB /* Album.swift in Sources */,
 				A83E7033215059530020B1EB /* MainSearchViewController.swift in Sources */,
 			);

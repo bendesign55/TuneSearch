@@ -12,10 +12,10 @@ import UIKit
 protocol Match {}
 
 protocol SearchCriteria {
-    var id: String { get set }
-    var name: String { get set }
-    var url: String { get set }
-    var image: [Image] { get set }
+    var id: String { get }
+    var name: String { get }
+    var url: String { get }
+    var image: [Image] { get }
 }
 
 struct Result {

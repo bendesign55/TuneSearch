@@ -34,6 +34,12 @@ class MainSearchViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? ResultDetailViewController {
+            detailVC.result = viewModel.getResult()
+        }
+    }
+    
     @IBAction func searchCategoryChange(_ sender: UISegmentedControl) {
         viewModel.setSelectionState(sender.selectedSegmentIndex)
     }
@@ -73,7 +79,8 @@ extension MainSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.selectResult(indexPath.row)
+        performSegue(withIdentifier: showDetailSegue, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
